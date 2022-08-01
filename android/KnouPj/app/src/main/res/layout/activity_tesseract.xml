@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TesseractActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#ffffff"
+        android:id="@+id/ImageContainer">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_launcher_background" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/OCRButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/ImageContainer"
+        android:background="#166e78"
+        android:clickable="true"
+        android:onClick="processImage">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:onClick="processImage"
+            android:text="OCR 실행"
+            android:textColor="#ffffff"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectLang"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_below="@id/OCRButtonContainer"
+        >
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:checked="true"
+                android:layout_weight="1"
+                android:text="한국어"
+                android:id="@+id/rg_btn1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:text="영어"
+                android:id="@+id/rg_btn2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectLang"
+        android:padding="10dp">
+
+        <TextView
+            android:textIsSelectable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/OCRTextView"
+            android:textSize="15dp"
+            android:textColor="#169cdf"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="#fff"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

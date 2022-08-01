@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EasyOCRActivity">
+
+    <TextView
+        android:layout_margin="16dp"
+        android:textSize="16dp"
+        android:text="텍스트 추출을 위한 이미지는 모델 학습을 위해 서버에 저장되고 추후에 모델 학습에만 사용됩니다."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/img_v_select_img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_launcher_background" />
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:textSize="24dp"
+            android:text="텍스트 추출을 원하는 이미지를 선택하고 추츨 버튼을 눌려주세요."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_search"
+            android:text="텍스트 추출하기"
+            android:layout_gravity="clip_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
