@@ -1,2 +1,3 @@
 venv
 ./server/Private_serverInfo.py
+./android/KnouPj/app/src/main/java/com/devkim/knoupj/privateData/NetWorkPrivateInfo.java
